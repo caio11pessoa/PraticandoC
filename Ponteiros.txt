@@ -1,0 +1,27 @@
+Aula 1 - Introdução Ponteiros
+8 bits = 1byte
+1024 bytes = 1kilobyte
+1024 kylobytes = 1 megabyte
+1024 megabytes = 1 gigabyte
+
+
+1 bit = 0 ou 1 (menor espaço de memória possível no computador)
+
+int x; -> o compulidor vai na memória do computador, procura um espaço armazenável que contenha espaços necessários para se armazenar um inteiro
+
+existe uma diferença entre valor que está contido na memória do meu computador e o endereço onde está contido esse valor
+o endereço de memória é o inicial
+
+ponteiros utiliza os endereços de memória
+-> altera o valor que está nesse endereço específico
+
+& -> indica o endereço da memória que contém a variável em questão
+
+o ponteiro precisa saber que tipo de dado ele vai estar apontando, int, char, etc...
+
+int *ponteiro; //criado um ponteiro que está apontando para algum inteiro(sendo declarado)
+ponteiro = &x
+
+
+*ponteiro -> valor
+ ponteiro -> endereço de memória
