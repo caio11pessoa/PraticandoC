@@ -24,4 +24,5 @@ ponteiro = &x
 
 
 *ponteiro -> valor
- ponteiro -> endereço de memória
+a ponteiro -> endereço de memória
+Aula 03
