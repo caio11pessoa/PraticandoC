@@ -25,4 +25,63 @@ ponteiro = &x
 
 *ponteiro -> valor
 a ponteiro -> endereço de memória
-Aula 03
+AULA 03 - ponteiro "char, int, double" - Aula 63
+
+    	int *pX;//Declarando o ponteiro, usa-se o *
+
+    	pX = &x;//Passando para o ponteiro o endereço de memória de x, usa-se o &
+	o endereço desse ponteiro, está apontando ao endereço de x
+
+	int *pX = &x;//Declarando e atribuindo na mesma linha
+
+
+	*pX = alguma coisa
+	o valor que *pX está apontando será atribuído a alguma coisa
+
+quando colocamos o ponteiro dessa maneira pX, queremos nos referir ao local da memória que ele está apontando
+quando colocamos o ponteiro dessa maneira *pX, queremos nos referir ao valor que está armazenado no lugar da memória em que ele está apontando
+
+Os ponteiros podem ser usados para realizar operações matemáticas, desde que se utilize o *
+
+ex    	double soma = *pX + *pY;
+
+se retirar os * vai dar um erro, pois o compilador vai estar tentando somar dois endereços de memória, o que não é possível
+
+pode ser atribuído diretamente um endereço de memória a um ponteiro
+
+int *ponteiro;
+ponteiro = 232144;//acredito que não seja aconselhado
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
