@@ -222,7 +222,7 @@ void testePonteiro(int *pX){
 
     testePonteiro(pTeste);//Não escreve * nesse caso, pois a função recebe um endereç de memória
  
-Aula 07 - Lista Concatenada - Aula 68
+Aula 08 - Lista Concatenada - Aula 68
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -256,4 +256,55 @@ int main()
 inicialmente gancho aponta para m1, que tem o valor 10, depois o gancho vai apontar para proximo, que proximo de m1 aponta para m2
 logo o gancho vai apontar pra m2, cujo valor é 20, após printar 20 ele aponta para ganhco->proximo que é um ponteiro para m3.
 
+Aula 09 - Lista Concatenada e Função que retorna Ponteiro - Aula 69
+
+#include <stdio.h>
+#include <stdlib.h>
+struct lista{
+    int valor;
+    struct lista *proximo;
+    };
+
+//Essa função retorna um endereço de memória struct
+struct lista *ProcurarValor(struct lista *pLista, int valor) {
+    while (pLista != (struct lista *)0){
+        if(pLista->valor == valor){
+                return(pLista);
+
+        }else{
+            pLista = pLista->proximo;
+        }
+    }
+    return(struct lista *)0;
+}
+
+int main()
+{
+    //Essa função recebe como argumento um endereço de memória de uma struct e um valor inteiro
+    struct lista *ProcurarValor(struct lista *pLista, int valor);
+    struct lista m1, m2, m3;
+    struct lista *resultado, *gancho = &m1;
+    int valor;
+
+    m1.valor = 5;
+    m2.valor = 10;
+    m3.valor = 15;
+
+    m1.proximo = &m2;
+    m2.proximo = &m3;
+    m3.proximo = 0;
+
+    printf("Digite valor da pesquisa: ");
+    scanf("%i", &valor);
+
+    resultado = ProcurarValor(gancho, valor);
+
+    if( resultado == (struct lista *)0){
+        printf("Valor nao encontrado. \n");
+    }else{
+        printf("Valor %i encontrado. \n", resultado->valor);
+    }
+    system("pause");
+    return 0;
+}
 
