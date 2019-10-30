@@ -308,3 +308,33 @@ int main()
     return 0;
 }
 
+AULA 10 - Ponteiros e Vetores - Aula 71
+
+
+o ponteiro quando aponta para um vetor ele não usa []
+e oq está sendo apontado não precisa do &
+int vetor[3] = {1,2,3};
+int *ponteiro = vetor;
+
+No caso, esse ponteiro está apontando para o primeiro membro desse vetor.
+
+    ponteiro = &vetor[2];
+    printf("%i\n", *ponteiro);
+
+Essa é outra maneira de apontar um vetor, nesse caso ele está apontando especificamente para aquele membro do vetor
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
