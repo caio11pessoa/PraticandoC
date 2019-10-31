@@ -364,6 +364,36 @@ int main()
 
 código que aplica todos os conhecimentos até agora
 
+AULA 13 - Copirar uma String utilizando Ponteiros - Aula 74
 
+Vetores char (Strings) se comportam de maneira parecida a vetores int
+#include <stdio.h>
+#include <stdlib.h>
 
+void copiarString(char *copiarDaqui, char *colarAqui){
 
+    while(*copiarDaqui != '\0'){
+        *colarAqui = *copiarDaqui;
+        colarAqui ++;
+        copiarDaqui ++;
+    }
+    *colarAqui = '\0';
+}
+int main()
+{
+    void copiarString(char *copiarDaqui, char *colarAqui);
+
+    char string1[] = "Pao com mortadela";
+    char string2[20];
+
+    copiarString(string1, string2);
+    printf("%s\n", string2);
+
+    getchar();
+    return 0;
+}
+
+Adicionando caractere nulo no final da String
+*colarAqui = '\0';
+
+FIM DO CURSO DE PONTEIROS
