@@ -323,13 +323,17 @@ No caso, esse ponteiro está apontando para o primeiro membro desse vetor.
 
 Essa é outra maneira de apontar um vetor, nesse caso ele está apontando especificamente para aquele membro do vetor
 
+AULA 11 - Ponteiros e Vetores - Aula 72
 
+%p é a maneira correta de se printar um endereço de memória de um ponteiro
+    printf("%p", ponteiro);
 
+Nesse caso, o ponteiro estará apontando para o próximo membro do vetor
+++ponteiro;
 
-
-
-
-
+Nesse exemplo, está sendo modificado o valor na memória de ponteiro + 1
+como o ponteiro está apontando para um vetor, no caso no próximo membro desse vetor será atribuído 10
+*(ponteiro + 1) = 10;
 
 
 
