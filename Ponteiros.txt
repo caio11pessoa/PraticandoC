@@ -335,9 +335,34 @@ Nesse exemplo, está sendo modificado o valor na memória de ponteiro + 1
 como o ponteiro está apontando para um vetor, no caso no próximo membro desse vetor será atribuído 10
 *(ponteiro + 1) = 10;
 
+AULA 12 - Ponteiros/Vetores/Funções - Aula 73
 
+#include <stdio.h>
+#include <stdlib.h>
+int somarVetor(int vetor[], const int n){
 
+    int soma = 0;
+    int *ponteiro;
+    int *const finalVetor = vetor + n;
 
+    for(ponteiro = vetor; ponteiro < finalVetor; ++ponteiro){
+        soma += *ponteiro;
+    }
+    return soma;
+
+}
+int main()
+{
+    int somarVetor(int vetor[], const int n);
+    int vetor[10]= {5,5,5,5,5,5,5,5,5,5};
+
+    printf("A soma dos membros do vetor = %i", somarVetor(vetor, 10));
+
+    getchar();
+    return 0;
+}
+
+código que aplica todos os conhecimentos até agora
 
 
 
